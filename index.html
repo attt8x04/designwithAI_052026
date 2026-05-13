@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13 Bí Quyết Nuôi Dạy Trẻ Khỏe Mạnh, Hạnh Phúc & Thành Công | HappyParent</title>
+    <meta name="description" content="Khám phá nền tảng giáo dục giúp trẻ tự lập, phát triển trí não và xây dựng nhân cách vượt trội thông qua 13 bí quyết từ chuyên gia.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Config for Custom Colors/Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316', // Orange
+                            600: '#ea580c',
+                            700: '#c2410c',
+                        },
+                        accent: {
+                            50: '#f0fdfa',
+                            500: '#14b8a6', // Teal
+                            600: '#0d9488',
+                            900: '#134e4a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for nuances not covered by Tailwind utilities */
+        body { font-family: 'Nunito', sans-serif; }
+        .z-pattern-row:nth-child(even) { flex-direction: row-reverse; }
+        @media (max-width: 768px) {
+            .z-pattern-row:nth-child(even) { flex-direction: column; }
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(240, 253, 250, 0.95), rgba(240, 253, 250, 0.7)), url('https://images.unsplash.com/photo-1542037104857-ffcb0b115451?q=80&w=2070&auto=format&fit=crop') center/cover;
+        }
+        .cta-bg {
+            background: linear-gradient(rgba(19, 78, 74, 0.85), rgba(19, 78, 74, 0.95)), url('https://images.unsplash.com/photo-1602052577122-f73b9710adba?q=80&w=2070&auto=format&fit=crop') center/cover fixed;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased bg-gray-50">
+
+    <!-- ========================================== -->
+    <!-- REUSABLE SVG ASSETS (Defined Once)         -->
+    <!-- ========================================== -->
+    <svg style="display: none;">
+        <!-- Logo Symbol -->
+        <symbol id="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+            <circle cx="12" cy="10" r="2" fill="currentColor"/>
+        </symbol>
+    </svg>
+
+    <!-- ========================================== -->
+    <!-- 01. NAVIGATION (Thanh Điều Hướng)          -->
+    <!-- ========================================== -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 group">
+                    <svg class="w-8 h-8 text-brand-500 group-hover:scale-110 transition-transform"><use href="#logo-icon"></use></svg>
+                    <span class="font-bold text-2xl text-accent-900 tracking-tight">Happy<span class="text-brand-500">Parent</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#phuong-phap" class="text-gray-600 hover:text-brand-500 font-semibold transition-colors">Phương pháp</a>
+                    <a href="#gia-tri" class="text-gray-600 hover:text-brand-500 font-semibold transition-colors">Giá trị cốt lõi</a>
+                    <a href="#dang-ky" class="bg-brand-500 hover:bg-brand-600 text-white px-6 py-2.5 rounded-full font-bold shadow-lg shadow-brand-500/30 transition-all transform hover:-translate-y-0.5">
+                        Nhận Tư Vấn Miễn Phí
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-600 p-2" id="mobile-menu-btn" aria-label="Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="#phuong-phap" class="mobile-link block px-3 py-3 text-gray-700 font-medium border-b border-gray-100">Phương pháp</a>
+                <a href="#gia-tri" class="mobile-link block px-3 py-3 text-gray-700 font-medium border-b border-gray-100">Giá trị cốt lõi</a>
+                <a href="#dang-ky" class="mobile-link mt-4 text-center bg-brand-500 text-white px-4 py-3 rounded-xl font-bold shadow-md block">
+                    Nhận Tư Vấn Miễn Phí
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- 02. HERO SECTION (Màn Hình Đầu Tiên)       -->
+    <!-- ========================================== -->
+    <section class="relative pt-24 pb-16 md:pt-32 md:pb-24 hero-gradient min-h-[90vh] flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Text Content -->
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-100 text-brand-700 font-semibold text-sm mb-6 border border-brand-200">
+                        <i data-lucide="sparkles" class="w-4 h-4"></i> Cẩm nang cho ba mẹ hiện đại
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                        13 BÍ QUYẾT NUÔI DẠY TRẺ <br class="hidden md:block"/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-orange-400">KHỎE MẠNH, HẠNH PHÚC</span> <br/>
+                        & THÀNH CÔNG
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+                        Dẫn dắt con trẻ bằng tình yêu thương và những giới hạn tích cực. Khám phá ngay nền tảng giúp trẻ tự lập, phát triển trí não và xây dựng nhân cách vượt trội từ gốc rễ.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#dang-ky" class="flex-1 sm:flex-none justify-center text-center bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-brand-500/30 transition-all transform hover:-translate-y-1 flex items-center gap-2">
+                            Nhận Tư Vấn Miễn Phí <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#phuong-phap" class="flex-1 sm:flex-none justify-center text-center bg-white hover:bg-gray-50 text-gray-800 border border-gray-200 px-8 py-4 rounded-xl font-bold text-lg shadow-sm transition-all flex items-center gap-2">
+                            Khám Phá Ngay
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image / Visual -->
+                <div class="hidden lg:block relative">
+                    <!-- Decorative Elements -->
+                    <div class="absolute -top-6 -left-6 w-24 h-24 bg-accent-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse delay-700"></div>
+                    
+                    <!-- Main Hero Image (from Unsplash) -->
+                    <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=2070&auto=format&fit=crop" alt="Gia đình hạnh phúc đọc sách cùng con" class="rounded-3xl shadow-2xl relative z-10 border-4 border-white object-cover h-[500px] w-full">
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-10 left-10 z-20 glass-card p-4 rounded-2xl shadow-xl flex items-center gap-4">
+                        <div class="bg-green-100 p-3 rounded-full text-green-600">
+                            <i data-lucide="shield-check" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 font-semibold">Được kiểm chứng</p>
+                            <p class="font-bold text-gray-900">Bởi Chuyên Gia TLH</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 03. SOCIAL PROOF (Thanh Chứng Minh Uy Tín) -->
+    <!-- ========================================== -->
+    <section class="bg-white py-10 border-b border-gray-100 shadow-sm relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                
+                <!-- Trust Metric -->
+                <div class="flex items-center gap-4 text-center md:text-left">
+                    <div class="flex -space-x-4">
+                        <img class="w-12 h-12 rounded-full border-2 border-white object-cover" src="https://i.pravatar.cc/100?img=1" alt="Phụ huynh 1">
+                        <img class="w-12 h-12 rounded-full border-2 border-white object-cover" src="https://i.pravatar.cc/100?img=5" alt="Phụ huynh 2">
+                        <img class="w-12 h-12 rounded-full border-2 border-white object-cover" src="https://i.pravatar.cc/100?img=9" alt="Phụ huynh 3">
+                        <div class="w-12 h-12 rounded-full border-2 border-white bg-gray-100 flex items-center justify-center text-sm font-bold text-gray-600">
+                            +5k
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex text-yellow-400 text-sm">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="font-bold text-gray-800"><span class="text-brand-500">+5.000</span> ba mẹ đã áp dụng thành công</p>
+                    </div>
+                </div>
+
+                <!-- Featured On / Certifications -->
+                <div class="flex items-center gap-6 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
+                    <span class="text-sm font-semibold text-gray-400 uppercase tracking-wider hidden lg:block">Đồng hành cùng:</span>
+                    <!-- Fake Logos using Text for simplicity & compliance -->
+                    <div class="font-black text-2xl tracking-tighter">VTV<span class="text-red-500">3</span></div>
+                    <div class="font-black text-2xl tracking-tighter text-blue-800">VN<span class="text-blue-500">Express</span></div>
+                    <div class="font-bold text-xl italic text-teal-800">Kid<span class="text-yellow-500">Edu</span> Foundation</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 04. CORE BENEFITS (Lợi Ích Cốt Lõi)        -->
+    <!-- ========================================== -->
+    <section id="phuong-phap" class="py-24 bg-gray-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-accent-600 font-bold tracking-wider uppercase text-sm">Phương Pháp Cốt Lõi</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2 mb-4">Hành Trình Nuôi Dạy Con <br/> Bắt Đầu Từ Những Điều Nhỏ Nhất</h2>
+                <div class="w-24 h-1 bg-brand-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-24">
+                
+                <!-- Block 1 -->
+                <div class="flex flex-col md:flex-row items-center gap-12 z-pattern-row">
+                    <div class="flex-1 relative">
+                        <div class="absolute inset-0 bg-accent-100 transform rotate-3 rounded-3xl"></div>
+                        <img src="https://images.unsplash.com/photo-1587691592099-24045742c181?q=80&w=2073&auto=format&fit=crop" alt="Thiết lập giới hạn" class="relative rounded-3xl shadow-lg w-full h-[350px] object-cover">
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-full shadow-xl">
+                            <div class="bg-brand-100 p-4 rounded-full text-brand-600"><i data-lucide="clock" class="w-8 h-8"></i></div>
+                        </div>
+                    </div>
+                    <div class="flex-1 space-y-6">
+                        <h3 class="text-2xl font-bold text-gray-900">1. Thiết Lập Giới Hạn & Thói Quen Hàng Ngày</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-accent-500 flex-shrink-0 mt-0.5"></i>
+                                <p class="text-gray-700"><strong>Giới hạn là điểm tựa:</strong> Không phải sự trừng phạt. Đó là bức tường vững chắc làm nền tảng để trẻ an tâm vươn lên và khám phá.</p>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-accent-500 flex-shrink-0 mt-0.5"></i>
+                                <p class="text-gray-700"><strong>Xây dựng thói quen tự lập:</strong> Sử dụng "Routine Cards" (Thẻ nhắc việc) giúp trẻ chủ động sinh hoạt Sáng - Chiều - Tối không cần la mắng.</p>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-accent-500 flex-shrink-0 mt-0.5"></i>
+                                <p class="text-gray-700"><strong>Tầm quan trọng của giấc ngủ:</strong> Ngủ sớm và đủ giấc là thành tố cốt lõi để phát triển não bộ và hệ thần kinh ổn định.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Block 2 -->
+                <div class="flex flex-col md:flex-row items-center gap-12 z-pattern-row">
+                    <div class="flex-1 relative">
+                        <div class="absolute inset-0 bg-brand-100 transform -rotate-3 rounded-3xl"></div>
+                        <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?q=80&w=2076&auto=format&fit=crop" alt="Sự đồng cảm và cái ôm" class="relative rounded-3xl shadow-lg w-full h-[350px] object-cover">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-full shadow-xl">
+                            <div class="bg-accent-100 p-4 rounded-full text-accent-600"><i data-lucide="heart" class="w-8 h-8 fill-current"></i></div>
+                        </div>
+                    </div>
+                    <div class="flex-1 space-y-6">
+                        <h3 class="text-2xl font-bold text-gray-900">2. Sự Đồng Cảm, Những Cái Ôm & Vui Đùa</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                                <p class="text-gray-700"><strong>Chìa khóa hạnh phúc:</strong> Sự thấu hiểu và đồng cảm từ ba mẹ là liều thuốc mạnh mẽ nhất ngăn chặn tâm lý chống đối và bạo lực.</p>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                                <p class="text-gray-700"><strong>Sức mạnh 12 cái ôm:</strong> Kích thích hormone hạnh phúc Oxytocin, giúp trẻ phát triển thể chất và tinh thần vượt bậc mỗi ngày.</p>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                                <p class="text-gray-700"><strong>"Chơi là công việc của trẻ":</strong> Dành thời gian vui đùa là cách nhanh nhất, tự nhiên nhất để kết nối sâu sắc với tâm hồn trẻ.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Block 3 -->
+                <div class="flex flex-col md:flex-row items-center gap-12 z-pattern-row">
+                    <div class="flex-1 relative">
+                        <div class="absolute inset-0 bg-yellow-100 transform rotate-2 rounded-3xl"></div>
+                        <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=2070&auto=format&fit=crop" alt="Vận động và việc nhà" class="relative rounded-3xl shadow-lg w-full h-[350px] object-cover">
+                        <div class="absolute -top-6 -left-6 bg-white p-4 rounded-full shadow-xl">
+                            <div class="bg-yellow-100 p-4 rounded-full text-yellow-600"><i data-lucide="sun" class="w-8 h-8"></i></div>
+                        </div>
+                    </div>
+                    <div class="flex-1 space-y-6">
+                        <h3 class="text-2xl font-bold text-gray-900">3. Vận Động Ngoài Trời & Việc Nhà</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-yellow-500 flex-shrink-0 mt-0.5"></i>
+                                <p class="text-gray-700"><strong>Vận động tự do:</strong> Khám phá thiên nhiên giúp trẻ cải thiện khả năng sáng tạo, giải phóng năng lượng và ổn định cảm xúc.</p>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-yellow-500 flex-shrink-0 mt-0.5"></i>
+                                <p class="text-gray-700"><strong>Trao quyền qua việc nhà:</strong> Không phải bóc lột, đây là cách tăng lòng tự trọng, tinh thần trách nhiệm và khả năng đối mặt thất bại.</p>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-yellow-500 flex-shrink-0 mt-0.5"></i>
+                                <p class="text-gray-700"><strong>Dự báo thành công:</strong> Các nghiên cứu cho thấy trẻ rèn làm việc nhà từ 3-4 tuổi có xu hướng thành đạt và hạnh phúc hơn ở tuổi 20.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Block 4 -->
+                <div class="flex flex-col md:flex-row items-center gap-12 z-pattern-row">
+                    <div class="flex-1 relative">
+                        <div class="absolute inset-0 bg-blue-100 transform -rotate-2 rounded-3xl"></div>
+                        <img src="https://images.unsplash.com/photo-1437419764061-2473afe69fc2?q=80&w=1932&auto=format&fit=crop" alt="Ưu tiên trải nghiệm" class="relative rounded-3xl shadow-lg w-full h-[350px] object-cover">
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-full shadow-xl">
+                            <div class="bg-blue-100 p-4 rounded-full text-blue-600"><i data-lucide="camera" class="w-8 h-8"></i></div>
+                        </div>
+                    </div>
+                    <div class="flex-1 space-y-6">
+                        <h3 class="text-2xl font-bold text-gray-900">4. Ưu Tiên Trải Nghiệm & Cảm Xúc</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-blue-500 flex-shrink-0 mt-0.5"></i>
+                                <p class="text-gray-700"><strong>Trải nghiệm > Vật chất:</strong> Trẻ sẽ luôn nhớ những kỷ niệm (như cùng ba xây lâu đài cát) hơn là những món đồ chơi đắt tiền.</p>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-blue-500 flex-shrink-0 mt-0.5"></i>
+                                <p class="text-gray-700"><strong>Thời gian chất lượng:</strong> Hãy thực sự "hiện diện" – cất điện thoại đi, cùng làm, cùng chơi và lắng nghe con bằng cả trái tim.</p>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-blue-500 flex-shrink-0 mt-0.5"></i>
+                                <p class="text-gray-700"><strong>Ngày sống chậm:</strong> Dành ra những khoảng lặng không lịch trình để ngắm nhìn và ghi nhớ sự tuyệt vời, ngây thơ của con.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Block 5 -->
+                <div class="flex flex-col md:flex-row items-center gap-12 z-pattern-row">
+                    <div class="flex-1 relative">
+                        <div class="absolute inset-0 bg-purple-100 transform rotate-3 rounded-3xl"></div>
+                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=2098&auto=format&fit=crop" alt="Nuôi dưỡng trí tuệ" class="relative rounded-3xl shadow-lg w-full h-[350px] object-cover">
+                        <div class="absolute -top-6 -right-6 bg-white p-4 rounded-full shadow-xl">
+                            <div class="bg-purple-100 p-4 rounded-full text-purple-600"><i data-lucide="book-open" class="w-8 h-8"></i></div>
+                        </div>
+                    </div>
+                    <div class="flex-1 space-y-6">
+                        <h3 class="text-2xl font-bold text-gray-900">5. Nuôi Dưỡng Trí Tuệ & Não Bộ</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                <p class="text-gray-700"><strong>Đọc sách cùng con:</strong> Thói quen trước giờ ngủ giúp thắt chặt tình cảm ba mẹ và mở ra một thế giới quan phong phú cho trẻ.</p>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                <p class="text-gray-700"><strong>Âm nhạc:</strong> Học nhạc cụ hoặc nghe nhạc chất lượng giúp xử lý âm thanh sinh lý thần kinh, cải thiện sự tập trung và kết quả học tập.</p>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                <p class="text-gray-700"><strong>Giới hạn điện tử (Screen time):</strong> Màn hình tivi/điện thoại quá mức làm chững lại sự phát triển não bộ. Hãy thiết lập quy tắc rõ ràng!</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 05. TESTIMONIALS (Đánh Giá Phụ Huynh)      -->
+    <!-- ========================================== -->
+    <section class="py-24 bg-accent-900 text-white relative">
+        <!-- Decor -->
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none">
+            <svg class="relative block w-full h-12" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#f9fafb"></path>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Hàng Ngàn Gia Đình Đã Thay Đổi</h2>
+                <p class="text-accent-100 max-w-2xl mx-auto">Những câu chuyện thực tế từ các ba mẹ đã áp dụng 13 bí quyết vào cuộc sống hàng ngày.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-accent-800 rounded-3xl p-8 shadow-lg relative mt-6">
+                    <i data-lucide="quote" class="absolute -top-6 left-8 w-12 h-12 text-brand-500 opacity-50"></i>
+                    <p class="text-gray-200 italic mb-6 relative z-10">"Từ khi áp dụng bộ thẻ Routine Cards, bé nhà mình (4 tuổi) tự động dậy đánh răng, gấp chăn mà không cần mẹ phải hét lên như trước. Buổi sáng của gia đình trở nên bình yên lạ thường."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://i.pravatar.cc/150?img=5" alt="Mẹ Lan Anh" class="w-14 h-14 rounded-full border-2 border-brand-500">
+                        <div>
+                            <h4 class="font-bold text-white">Mẹ Lan Anh</h4>
+                            <p class="text-sm text-accent-300">Bé Ken (4 tuổi)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-accent-800 rounded-3xl p-8 shadow-lg relative">
+                    <i data-lucide="quote" class="absolute -top-6 left-8 w-12 h-12 text-brand-500 opacity-50"></i>
+                    <p class="text-gray-200 italic mb-6 relative z-10">"Tôi từng rất đau đầu vì con nghiện iPad. Nhờ phương pháp thiết lập giới hạn và thay thế bằng các hoạt động việc nhà, con trai tôi giờ thích phụ bố rửa xe và nhổ cỏ hơn xem Youtube."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://i.pravatar.cc/150?img=11" alt="Bố Hoàng Nam" class="w-14 h-14 rounded-full border-2 border-brand-500">
+                        <div>
+                            <h4 class="font-bold text-white">Bố Hoàng Nam</h4>
+                            <p class="text-sm text-accent-300">Bé Tom (7 tuổi)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-accent-800 rounded-3xl p-8 shadow-lg relative mt-6">
+                    <i data-lucide="quote" class="absolute -top-6 left-8 w-12 h-12 text-brand-500 opacity-50"></i>
+                    <p class="text-gray-200 italic mb-6 relative z-10">"Sức mạnh của 12 cái ôm thực sự kỳ diệu. Bé nhà mình hay ăn vạ, nhưng từ khi mẹ hạ giọng và ôm con nhiều hơn, bé hiểu chuyện và ngoan ngoãn đi ngủ xuyên đêm. Rất biết ơn tài liệu này!"</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://i.pravatar.cc/150?img=9" alt="Mẹ Thảo Vy" class="w-14 h-14 rounded-full border-2 border-brand-500">
+                        <div>
+                            <h4 class="font-bold text-white">Mẹ Thảo Vy</h4>
+                            <p class="text-sm text-accent-300">Bé Dâu (3 tuổi)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 06. ROADMAP (Cách Thức Tham Gia)           -->
+    <!-- ========================================== -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Lộ Trình Thay Đổi Bắt Đầu Từ Hôm Nay</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Chỉ với 4 bước đơn giản, ba mẹ sẽ nắm trong tay chìa khóa để kiến tạo một môi trường phát triển tốt nhất cho con.</p>
+            </div>
+
+            <div class="relative">
+                <!-- Line in middle (Desktop) -->
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-brand-100 transform -translate-x-1/2"></div>
+                
+                <div class="space-y-12">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-8 group">
+                        <div class="md:w-1/2 flex md:justify-end text-center md:text-right">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Bước 1: Đăng ký thông tin</h3>
+                                <p class="text-gray-600 mt-2">Điền form bên dưới để lại thông tin và độ tuổi của bé để chúng tôi hiểu rõ nhu cầu của gia đình bạn.</p>
+                            </div>
+                        </div>
+                        <div class="z-10 relative">
+                            <div class="w-16 h-16 rounded-full bg-white border-4 border-brand-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                <span class="text-2xl font-black text-brand-500">1</span>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 hidden md:block"></div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center justify-center gap-8 group">
+                        <div class="md:w-1/2 flex md:justify-start text-center md:text-left">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Bước 2: Nhận tư vấn 1-1</h3>
+                                <p class="text-gray-600 mt-2">Chuyên gia của HappyParent sẽ liên hệ để phân tích tình trạng hiện tại và đưa ra lời khuyên cá nhân hóa.</p>
+                            </div>
+                        </div>
+                        <div class="z-10 relative">
+                            <div class="w-16 h-16 rounded-full bg-white border-4 border-brand-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                <span class="text-2xl font-black text-brand-500">2</span>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 hidden md:block"></div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-8 group">
+                        <div class="md:w-1/2 flex md:justify-end text-center md:text-right">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Bước 3: Nhận tài liệu & Áp dụng</h3>
+                                <p class="text-gray-600 mt-2">Nhận E-book "13 Bí Quyết" và Bộ thẻ Routine Cards. Bắt đầu áp dụng ngay vào nếp sinh hoạt hàng ngày.</p>
+                            </div>
+                        </div>
+                        <div class="z-10 relative">
+                            <div class="w-16 h-16 rounded-full bg-white border-4 border-brand-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                <span class="text-2xl font-black text-brand-500">3</span>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 hidden md:block"></div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center justify-center gap-8 group">
+                        <div class="md:w-1/2 flex md:justify-start text-center md:text-left">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Bước 4: Thấy sự thay đổi</h3>
+                                <p class="text-gray-600 mt-2">Chứng kiến sự tự lập, ngoan ngoãn và nụ cười rạng rỡ của con mỗi ngày. Cộng đồng hỗ trợ trọn đời.</p>
+                            </div>
+                        </div>
+                        <div class="z-10 relative">
+                            <div class="w-16 h-16 rounded-full bg-brand-500 border-4 border-brand-200 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform text-white">
+                                <i data-lucide="check" class="w-8 h-8"></i>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 hidden md:block"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 07. LEAD GEN FORM / PRICING                -->
+    <!-- ========================================== -->
+    <section id="dang-ky" class="py-24 bg-brand-50 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ea580c 2px, transparent 2px); background-size: 30px 30px;"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+                
+                <!-- Info Side -->
+                <div class="lg:w-5/12 bg-brand-600 text-white p-10 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-brand-500 rounded-full mix-blend-multiply opacity-50"></div>
+                    <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-brand-700 rounded-full mix-blend-multiply opacity-50"></div>
+                    
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-extrabold mb-4">Nhận Ngay Bộ Quà Tặng Độc Quyền</h3>
+                        <p class="text-brand-100 mb-8">Dành riêng cho 100 phụ huynh đăng ký sớm nhất trong hôm nay.</p>
+                        
+                        <ul class="space-y-6">
+                            <li class="flex items-start gap-4">
+                                <div class="bg-white/20 p-2 rounded-lg backdrop-blur-sm"><i data-lucide="book" class="w-6 h-6 text-white"></i></div>
+                                <div>
+                                    <p class="font-bold text-lg">E-book "13 Bí Quyết"</p>
+                                    <p class="text-sm text-brand-200">Bản PDF chi tiết, dễ hiểu. <span class="line-through text-white/50 text-xs">Giá 299k</span> <span class="text-yellow-300 font-bold">MIỄN PHÍ</span></p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="bg-white/20 p-2 rounded-lg backdrop-blur-sm"><i data-lucide="layers" class="w-6 h-6 text-white"></i></div>
+                                <div>
+                                    <p class="font-bold text-lg">Bộ Routine Cards (In màu)</p>
+                                    <p class="text-sm text-brand-200">Giúp bé tự lập mỗi ngày. <span class="line-through text-white/50 text-xs">Giá 150k</span> <span class="text-yellow-300 font-bold">MIỄN PHÍ</span></p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="bg-white/20 p-2 rounded-lg backdrop-blur-sm"><i data-lucide="phone-call" class="w-6 h-6 text-white"></i></div>
+                                <div>
+                                    <p class="font-bold text-lg">1 Buổi Tư Vấn Chuyên Gia</p>
+                                    <p class="text-sm text-brand-200">Giải quyết vấn đề riêng của bé. <span class="line-through text-white/50 text-xs">Giá 500k</span> <span class="text-yellow-300 font-bold">MIỄN PHÍ</span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Form Side -->
+                <div class="lg:w-7/12 p-10 bg-white">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Đăng Ký Nhận Tư Vấn & Quà Tặng</h3>
+                    <p class="text-gray-500 mb-8 text-sm">Thông tin của bạn được bảo mật an toàn 100%.</p>
+
+                    <form id="leadForm" class="space-y-5">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Họ tên ba/mẹ <span class="text-red-500">*</span></label>
+                                <div class="relative">
+                                    <i data-lucide="user" class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"></i>
+                                    <input type="text" required class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" placeholder="VD: Nguyễn Văn A">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Số điện thoại (Zalo) <span class="text-red-500">*</span></label>
+                                <div class="relative">
+                                    <i data-lucide="phone" class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"></i>
+                                    <input type="tel" required pattern="[0-9]{10}" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" placeholder="09xxxxxxx">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email <span class="text-gray-400 font-normal">(Để nhận E-book)</span></label>
+                            <div class="relative">
+                                <i data-lucide="mail" class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"></i>
+                                <input type="email" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" placeholder="email@example.com">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Độ tuổi của bé <span class="text-red-500">*</span></label>
+                            <select required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-gray-700 bg-white">
+                                <option value="" disabled selected>Chọn độ tuổi...</option>
+                                <option value="0-3">Từ 0 - 3 tuổi (Giai đoạn vàng)</option>
+                                <option value="3-6">Từ 3 - 6 tuổi (Tiền tiểu học)</option>
+                                <option value="6-10">Từ 6 - 10 tuổi (Tiểu học)</option>
+                                <option value="10+">Trên 10 tuổi</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold text-lg py-4 rounded-xl shadow-lg shadow-brand-500/30 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 mt-6">
+                            Gửi Yêu Cầu Tư Vấn Ngay <i data-lucide="send" class="w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 08. FINAL CTA & MINDSET SHIFT              -->
+    <!-- ========================================== -->
+    <section id="gia-tri" class="py-24 relative flex items-center cta-bg">
+        <div class="absolute inset-0 bg-accent-900/80 mix-blend-multiply"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            
+            <i data-lucide="quote" class="w-16 h-16 text-brand-500 mx-auto mb-6 opacity-80"></i>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-8 leading-tight">
+                Ba Mẹ Đã Sẵn Sàng <br/> Đồng Hành Cùng Con?
+            </h2>
+            
+            <p class="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
+                Trẻ em chưa đủ khả năng để tự phá vỡ những thói quen xấu. <strong>Sự thay đổi luôn bắt đầu từ chính ba mẹ.</strong> Ba mẹ chính là người kiến tạo nền tảng. Để con trưởng thành toàn diện, hãy làm gương và gieo mầm cho con 5 giá trị cốt lõi:
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-10">
+                <span class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-2 rounded-full font-semibold flex items-center gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Hào phóng
+                </span>
+                <span class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-2 rounded-full font-semibold flex items-center gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Trách nhiệm
+                </span>
+                <span class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-2 rounded-full font-semibold flex items-center gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Biết ơn
+                </span>
+                <span class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-2 rounded-full font-semibold flex items-center gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Tử tế
+                </span>
+                <span class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-2 rounded-full font-semibold flex items-center gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Chăm chỉ
+                </span>
+            </div>
+
+            <div class="bg-black/30 backdrop-blur-sm border-l-4 border-brand-500 p-6 rounded-r-xl mb-10 text-left">
+                <p class="text-2xl text-white font-bold italic text-center">"Hãy là người dẫn dắt bằng tình yêu và giới hạn."</p>
+            </div>
+
+            <a href="#dang-ky" class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-10 py-5 rounded-xl font-bold text-xl shadow-2xl shadow-brand-500/40 transition-all transform hover:scale-105">
+                Đăng Ký Khóa Học Ngay Hôm Nay
+            </a>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 09. FOOTER (Chân Trang)                    -->
+    <!-- ========================================== -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 border-b border-gray-800 pb-8">
+                
+                <!-- Brand Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <a href="#" class="flex items-center gap-2 mb-4 group inline-flex">
+                        <svg class="w-8 h-8 text-brand-500"><use href="#logo-icon"></use></svg>
+                        <span class="font-bold text-2xl text-white tracking-tight">Happy<span class="text-brand-500">Parent</span></span>
+                    </a>
+                    <p class="text-sm leading-relaxed mb-6 max-w-sm">
+                        Nền tảng cung cấp kiến thức và phương pháp giáo dục sớm, giúp ba mẹ đồng hành cùng con xây dựng tương lai tươi sáng bằng tình yêu và sự thấu hiểu.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-colors">
+                            <i data-lucide="youtube" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Liên Hệ</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="user-circle" class="w-5 h-5 text-brand-500 flex-shrink-0"></i>
+                            <span>Chuyên gia tư vấn: <strong class="text-white">trucntt1</strong></span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="phone" class="w-5 h-5 text-brand-500 flex-shrink-0"></i>
+                            <a href="tel:0901234567" class="hover:text-brand-500">090.123.4567</a>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="mail" class="w-5 h-5 text-brand-500 flex-shrink-0"></i>
+                            <a href="mailto:trucntt1@viettel.com.vn" class="hover:text-brand-500 break-all">trucntt1@</a>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-500 flex-shrink-0"></i>
+                            <span>Tòa nhà V, P.Bảy Hiền, TP.HCM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Chính Sách</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Về chúng tôi</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Điều khoản sử dụng</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Chính sách bảo mật</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Chính sách hoàn tiền</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center text-sm">
+                <p class="text-white font-medium mb-2 text-base">"Chúc các ba mẹ ứng dụng thành công để mỗi ngày bên con đều là một ngày ý nghĩa!"</p>
+                <p>&copy; 2026 HappyParent. All rights reserved. Designed for Educational purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- CUSTOM MODAL (Thay thế cho Alert)          -->
+    <!-- ========================================== -->
+    <div id="successModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-gray-900/60 backdrop-blur-sm transition-opacity">
+        <div class="bg-white rounded-3xl p-8 max-w-sm w-full shadow-2xl text-center transform scale-95 transition-transform" id="modalContent">
+            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check-circle" class="w-10 h-10 text-green-500"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Đăng Ký Thành Công!</h3>
+            <p class="text-gray-600 mb-6">Cảm ơn ba/mẹ. Chuyên gia của chúng tôi sẽ liên hệ trong thời gian sớm nhất.</p>
+            <button onclick="closeModal()" class="w-full bg-brand-500 text-white font-bold py-3 rounded-xl hover:bg-brand-600 transition-colors">
+                Hoàn tất
+            </button>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- JAVASCRIPT                                 -->
+    <!-- ========================================== -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // 1. Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // 2. Sticky Navbar Effect on Scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-md', 'bg-white/95');
+                navbar.classList.remove('bg-white/90');
+            } else {
+                navbar.classList.remove('shadow-md', 'bg-white/95');
+                navbar.classList.add('bg-white/90');
+            }
+        });
+
+        // 3. Form Submission Handling (Custom Modal instead of Alert)
+        const form = document.getElementById('leadForm');
+        const modal = document.getElementById('successModal');
+        const modalContent = document.getElementById('modalContent');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent page reload
+            
+            // Show modal
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            // Small delay for pop animation
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+            }, 10);
+
+            // Reset form
+            form.reset();
+        });
+
+        // Close Modal Function
+        function closeModal() {
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 200);
+        }
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
